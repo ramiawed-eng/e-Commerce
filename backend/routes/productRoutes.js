@@ -12,6 +12,10 @@ productRoutes.get(
   asyncHanlder(async (req, res, next) => {
     const products = await Product.find({});
 
+    // res.status(401);
+
+    // throw new Error('Not Authorized');
+
     res.json(products);
   })
 );
