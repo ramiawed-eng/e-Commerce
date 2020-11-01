@@ -30,7 +30,7 @@ const ProductScreen = ({ history, match }) => {
 
   useEffect(() => {
     dispatch(productDetails(match.params.id));
-  }, [match]);
+  }, [dispatch, match.params.id]);
 
   return (
     <>
